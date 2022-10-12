@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
-import Home from './Home';
+import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
+import React from 'react';
+import logo from '../assets/logo.png';
 
 export default function Login({navigation}) {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
+            <Image source={logo} style= {{ width: 200, height: 200}}/>
             <TouchableOpacity onPress={() => navigation.navigate('home')} style={styles.button}>
                 <Text style={styles.buttonText}>LOGIN</Text>
             </TouchableOpacity>
