@@ -1,15 +1,28 @@
-import { Text, View, BackHandler } from "react-native";
+import { Text, View, BackHandler, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Home({ navigation }) {
-    const backAction =()=>{
+export default function Home({ navigation, route }) {
+    const backAction = () => {
         return true
     }
-    const backHandler = BackHandler.addEventListener("hardwareBackPress", backAction);
+    BackHandler.addEventListener("hardwareBackPress", backAction);
+
+    const { name_param, pass_param } = route.params
 
     return (
-        <View>
-            <Text>Home</Text>
+        <View style={styles.container}>
+            <Text>
+                This is {JSON.stringify(name_param)} with password: {JSON.stringify(pass_param)}
+            </Text>
         </View>
-    );
+    )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
