@@ -42,15 +42,15 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: "blue",
-        width: 150,
-        height: 50,
+        width: 100,
+        height: 30,
         margin: 20,
         borderRadius: 5,
         alignItems: "center",
         justifyContent: "center"
     },
     buttonText: {
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: "bold",
         color: '#fff',
     },
